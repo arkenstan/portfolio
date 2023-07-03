@@ -1,0 +1,14 @@
+@mixin flex($direction, $wrap, $justify, $alignItems) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $alignItems;
+  justify-content: $justify;
+}
+
+@mixin flexCenter {
+  @include flex(row, wrap, center, center);
+}
+
+@mixin spacer {
+  flex: 1 1 auto;
+}

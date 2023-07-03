@@ -1,0 +1,30 @@
+<div class="workarea">
+  <div class="left-panel">
+    <section class="header">
+      <h1 class="name">{{ data.name }}</h1>
+      <h4 class="title">{{ data.title }}</h4>
+      <p class="summary">{{ data.summary }}</p>
+    </section>
+
+    <section class="navigation spacer">
+      <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Experience</li>
+      </ul>
+    </section>
+
+    <section class="socials">
+      <a
+        *ngFor="let social of data.socials"
+        [href]="social.url"
+        target="_blank"
+      >
+        {{ social.name }}
+      </a>
+    </section>
+  </div>
+  <div class="right-panel">
+    <p class="about" [innerHTML]="data.about | md"></p>
+  </div>
+</div>

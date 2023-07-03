@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "main";
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap");
+* {
+  @include clearAll;
+}
+
+html,
+body {
+  @include absolution;
+  font-family: "Mukta", "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: $backgroundDarker;
+  color: rgb(148, 163, 184);
+}
+
+.spacer {
+  @include spacer;
+}

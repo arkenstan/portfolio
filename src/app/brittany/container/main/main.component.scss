@@ -1,0 +1,45 @@
+@import "main";
+:host {
+  @include absolution;
+  // background: linear-gradient(45deg, $background, $backgroundDarker);
+
+  .workarea {
+    position: relative;
+    @include flex(row, nowrap, flex-start, stretch);
+    width: 100%;
+    height: 100%;
+    padding: 0 16rem;
+    overflow: auto;
+  }
+
+  & > * {
+    height: 100%;
+  }
+
+  .left-panel {
+    position: sticky;
+    top: 0;
+    min-width: min-content;
+    @include flex(column, nowrap, flex-start, flex-start);
+    border: 5px solid #069;
+    padding: 6rem 8rem;
+    .header {
+      @include flex(column, nowrap, flex-start, flex-start);
+      .name {
+        font-size: 4rem;
+        white-space: nowrap;
+      }
+      .title {
+        font-size: 1.5rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .right-panel {
+    padding: 6rem 8rem;
+    .about {
+      @include paragraph;
+    }
+  }
+}
